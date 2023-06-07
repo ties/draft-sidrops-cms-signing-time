@@ -294,8 +294,10 @@
 
     <reference anchor="ls" target="https://pubs.opengroup.org/onlinepubs/9699919799/utilities/ls.html">
       <front>
-        <title>ls - The Open Group Base Specifications Issue 7, 2018 edition</title>
-        <author fullname="IEEE and The Open Group"/>
+        <title>ls - The Open Group Base Specifications Issue 7</title>
+        <author>
+          <organization>IEEE and The Open Group</organization>
+        </author>
         <date year="2018"/>
       </front>
     </reference>
