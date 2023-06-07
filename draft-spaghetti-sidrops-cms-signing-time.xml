@@ -107,7 +107,7 @@
         When serializing RPKI Signed Objects to a filesystem hierarchy for RSYNC consumption, the mod-time of the file containing the Signed Object MUST be set to the CMS signing-time contained within the Signed Object.
       </t>
     </section>
-    <section title="Guidance for Relaying Parties" anchor="rpguidance">
+    <section title="Guidance for Relying Parties" anchor="rpguidance">
       <t>
         When serializing RPKI Signed Objects retrieved via RRDP to a filesystem hierarchy, the mod-time of the file containing the Signed Object MUST be set to the CMS signing-time contained within the Signed Object.
       </t>
@@ -157,7 +157,7 @@
     </t>
     <t>
       In the above-mentioned period of time, zero Signed Objects were discovered with a CMS binary-signing-time <xref target="RFC6019"/> attribute.
-      Therefor, disallowing the CMS binary-signing-time attribute would not make any existing CA operations non-compliant.
+      Therefore, disallowing the CMS binary-signing-time attribute would not make any existing CA operations non-compliant.
     </t>
   </section>
 
