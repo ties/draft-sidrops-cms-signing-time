@@ -161,8 +161,13 @@
   <section title="Considerations and Alternative Approaches">
     <t>
       A slightly different approach suggested to normalize file mod-times based on the Signed Object's embedded End-Entity (EE) X.509 notBefore timestamp value.
-      The downside of that approach is that some CAs backdate the notBefore timestamp to increase the validity window of the Signed Object, which at the same time decreases the insight as to when exactly the Signed Object purportedly came into existence.
-      Another downside is that Publishers would need to deserialize both the CMS and the X.509 EE certificate to extract the notBefore timestamp.
+      A downside of that approach is that some CAs backdate the notBefore timestamp to increase the validity window of the Signed Object, which at the same time decreases insight for RPKI operators as to when exactly the Signed Object purportedly came into existence.
+    </t>
+    <t>
+      Another downside of using notBefore is that Publishers would need to deserialize both the CMS envelope and the therein contained X.509 EE certificate to extract a timestamp.
+    </t>
+    <t>
+      Ensuring the mod-time is set to the CMS signing-time gives RPKI operators a headstart when using tools like <xref target="ls"/>.
     </t>
     <t>
       The CMS signing-time attribute proved to be useful in researching and tracking delays in various layers of the RPKI <xref target="PAM23"/>.
@@ -284,6 +289,14 @@
         <author fullname="Kevin Vermeulen"/>
         <author fullname="Randy Bush"/>
         <date month="February" year="2023" />
+      </front>
+    </reference>
+
+    <reference anchor="ls" target="https://pubs.opengroup.org/onlinepubs/9699919799/utilities/ls.html">
+      <front>
+        <title>ls - The Open Group Base Specifications Issue 7, 2018 edition</title>
+        <author fullname="IEEE and The Open Group"/>
+        <date year="2018"/>
       </front>
     </reference>
 
