@@ -95,7 +95,9 @@
     </t>
     <t>
       In the RSYNC synchronization protocol, a file's last modification timestamp (from here on 'mod-time') and the filesize are used to determine whether sending a copy the file copy over the wire is needed.
-      Using mod-time plus filesize (the default mode for both GPL <xref target="rsync"/> and <xref target="openrsync"/>) consumes far less CPU cycles than calculating and comparing the 128-bit MD4 checksum of the file (rsync's '-c' command line option) for the purpose of determining the list of files to be transferred.
+      This is the default mode for both GPL <xref target="rsync"/> and <xref target="openrsync"/>.
+      Using the mod-time &amp; filesize parameters consumes far less CPU cycles than calculating and comparing the 128-bit MD4 checksum of the file (rsync's '-c' command line option) for the purpose of determining the list of files to be transferred.
+      A reduced list of files to-be-transfered in turn reduces network bandwidth consumption and reduces IOPS on both the Publisher and RP side of the house.
     </t>
     <t>
       In order to reduce the burden of the RSYNC synchronization (following a RRDP failure), Publishers and Relying Parties SHOULD adhere to the following guidelines.
