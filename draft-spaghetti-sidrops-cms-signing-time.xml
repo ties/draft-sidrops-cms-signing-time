@@ -202,6 +202,19 @@
         </t>
       </list>
     </t>
+    <t>
+      In section 2.1.6.4.3 the first sentence "The signing-time attribute MAY be present." is replaced with the following text:
+    </t>
+    <t>
+      <list style="empty">
+        <t>
+          The signing-time attribute MUST be present.
+        </t>
+      </list>
+    </t>
+    <t>
+      Section 2.1.6.4.4 is removed in its entirety.
+    </t>
   </section>
 
   <section title="Security Considerations">
@@ -219,7 +232,7 @@
   <section title="Acknowledgements">
     <t>
       The authors would like to thank
-      TBD
+      <contact fullname="Ties de Kock"/>
       for their helpful review of this document.
     </t>
   </section>
