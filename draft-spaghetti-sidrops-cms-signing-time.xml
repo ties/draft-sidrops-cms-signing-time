@@ -176,7 +176,7 @@
       Another downside of using notBefore is that Publishers would need to deserialize both the CMS envelope and the X.509 EE certificate contained therein to extract a timestamp, instead of merely parsing the CMS envelope.
     </t>
     <t>
-      Ensuring the mod-time is set to the CMS signing-time gives RPKI operators a headstart when using tools like <xref target="ls"/>, in the sense that the mod-time aligns with the time of object issuance.
+      Ensuring the mod-time is set to the CMS signing-time gives RPKI operators a headstart when using tools like <xref target="ls"/>, in the sense that the mod-time aligns with the purported time of object issuance.
     </t>
     <t>
       The CMS signing-time attribute has proven useful in researching and tracking delays in various layers of the RPKI <xref target="PAM23"/>.
