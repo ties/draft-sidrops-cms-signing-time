@@ -180,7 +180,7 @@
       This section updates <xref target="RFC6488"/> to make the CMS signing-time attribute mandatory and disallow the presence of the CMS binary-signing-time attribute.
     </t>
     <t>
-      In section 2.1.6.4 the third paragraph starting with "The signedAttrs element MUST be present and ..." and ending in "Other signed attributes MUST NOT be included." is replaced with the following text:
+      In section 2.1.6.4 the paragraph starting with "The signedAttrs element MUST be present and ..." and ending in "Other signed attributes MUST NOT be included." is replaced with the following text:
     </t>
     <t>
       <list style="empty">
