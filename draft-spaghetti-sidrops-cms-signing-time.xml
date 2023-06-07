@@ -91,7 +91,7 @@
       This document advances the aforementioned concept by describing a synchronization strategy through which needless transfers also are avoided when RSYNC is used for the first time, by leveraging previously cached data retrieved via RRDP.
     </t>
     <t>
-      As described in <xref target="I-D.ietf-sidrops-prefer-rrdp"/>, RP implementations are expected to first try synchronization via RRDP, and if only if that fails for some reason (malformed XML, expired TLS certificate, TCP connection timeout, etc), then attempt to synchronize via RSYNC instead.
+      As described in <xref target="I-D.ietf-sidrops-prefer-rrdp"/>, RP implementations are expected to first try synchronization via RRDP, and if and only if that fails - for some reason (malformed XML, expired TLS certificate, TCP connection timeout, etc) - only then attempt to synchronize via RSYNC instead.
     </t>
     <t>
       In the RSYNC synchronization protocol, a file's last modification timestamp (from here on 'mod-time') and the filesize are used to determine whether sending a copy the file copy over the wire is needed.
