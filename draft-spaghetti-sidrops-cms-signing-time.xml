@@ -106,6 +106,9 @@
       <t>
         When serializing RPKI Signed Objects to a filesystem hierarchy for RSYNC consumption, the mod-time of the file containing the Signed Object SHOULD be set to the CMS signing-time contained within the Signed Object.
       </t>
+      <t>
+        In general, actors are limited to changing objects in the publication point for a CA under their control. In some situations (i.e. creating an object at a parent CA through automated means), actors may be able to create/update/delete objects in a shared publication point. Using a filename derived from the one-time use EE certificate's public key prevents the publication of Signed Objects at the same URL and mod-time.
+      </t>
     </section>
     <section title="Guidance for Relying Parties" anchor="rpguidance">
       <t>
@@ -217,15 +220,7 @@
   </section>
 
   <section title="Security Considerations">
-    <t>
-      Two reasons for Publishers not using the signing time as mod-time were discussed. First of all, code that writes a repository structure now needs to parse ASN.1/x509 objects, increasing complexity.
-    </t>
-    <t>
-      Second, an actor could cause the publication of multiple objects at the same path with the same signing time (e.g. by causing multiple objects to be published during the same second). The repository spooling approach described in [XREF] may exacerbate this issue. Depending on the sequence of events observed by an RP, this may result in a failed fetch.
-    </t>
-    <t>
-      Publishers implementing [this document] should weigh the peak data transfer saved on fallback from RRDP to rsync by writing a consistent mod-time against this unlikely but not purely theoretical situation.
-    </t>
+-      This document has no Security Considerations.
   </section>
 
   <section title="IANA Considerations">
